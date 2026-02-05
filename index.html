@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morrow — AJ Morrow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="/" class="logo">MORROW</a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">Building<br>the future<br>with code</h1>
+          <p class="hero-subtitle">Software engineer. Systems architect. Builder.</p>
+        </div>
+        <div class="hero-visual">
+          <div class="mountain-scene">
+            <svg viewBox="0 0 800 600" class="mountain-svg" preserveAspectRatio="xMidYMid slice">
+              <!-- Grid lines background -->
+              <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)"/>
+
+              <!-- Geometric mountains -->
+              <!-- Far mountain - lightest -->
+              <polygon points="600,600 800,600 700,280" fill="#2a2a2a"/>
+
+              <!-- Middle mountain -->
+              <polygon points="200,600 550,600 375,200" fill="#1a1a1a"/>
+
+              <!-- Main peak - darkest with accent -->
+              <polygon points="0,600 450,600 225,120" fill="#0d0d0d"/>
+
+              <!-- Accent triangle -->
+              <polygon points="225,120 280,220 170,220" fill="#e63946"/>
+
+              <!-- Horizontal accent line -->
+              <line x1="0" y1="450" x2="800" y2="450" stroke="#e63946" stroke-width="2"/>
+
+              <!-- Geometric sun/moon -->
+              <circle cx="650" cy="180" r="50" fill="none" stroke="#ffffff" stroke-width="2"/>
+              <circle cx="650" cy="180" r="35" fill="#ffffff"/>
+
+              <!-- Vertical accent element -->
+              <rect x="750" y="0" width="4" height="600" fill="#e63946"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section section-work">
+      <div class="section-grid">
+        <div class="section-label">
+          <span class="label-text">01</span>
+          <span class="label-line"></span>
+        </div>
+        <div class="section-content">
+          <h2 class="section-title">Selected Work</h2>
+          <div class="work-grid">
+            <article class="work-item">
+              <div class="work-number">01</div>
+              <h3 class="work-title">Systems Architecture</h3>
+              <p class="work-desc">Designing scalable infrastructure for modern applications</p>
+            </article>
+            <article class="work-item">
+              <div class="work-number">02</div>
+              <h3 class="work-title">Open Source</h3>
+              <p class="work-desc">Contributing to tools that empower developers</p>
+            </article>
+            <article class="work-item">
+              <div class="work-number">03</div>
+              <h3 class="work-title">AI Engineering</h3>
+              <p class="work-desc">Building intelligent systems with purpose</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-about">
+      <div class="section-grid">
+        <div class="section-label">
+          <span class="label-text">02</span>
+          <span class="label-line"></span>
+        </div>
+        <div class="section-content">
+          <h2 class="section-title">About</h2>
+          <div class="about-content">
+            <p class="about-text">
+              I build software systems that solve real problems.
+              My work spans distributed systems, developer tools,
+              and AI applications — always with a focus on clarity,
+              reliability, and thoughtful design.
+            </p>
+            <div class="about-details">
+              <div class="detail-item">
+                <span class="detail-label">Location</span>
+                <span class="detail-value">Remote</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Focus</span>
+                <span class="detail-value">Systems & AI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <div class="section-grid">
+        <div class="section-label">
+          <span class="label-text">03</span>
+          <span class="label-line"></span>
+        </div>
+        <div class="section-content">
+          <h2 class="section-title">Contact</h2>
+          <div class="contact-content">
+            <p class="contact-text">Open to interesting projects and collaborations.</p>
+            <div class="contact-links">
+              <a href="mailto:hello@morrowai.com" class="contact-link">Email</a>
+              <a href="https://github.com/codejeet" class="contact-link">GitHub</a>
+              <a href="https://linkedin.com/in/" class="contact-link">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <span class="footer-logo">MORROW</span>
+      <span class="footer-year">2026</span>
+    </div>
+  </footer>
+</body>
+</html>
