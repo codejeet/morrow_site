@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJ Morrow</title>
+    <title>Morrow</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
 <body>
     <header class="site-header">
         <nav class="nav">
-            <a href="/" class="logo">AJ</a>
+            <a href="/" class="logo">MORROW</a>
             <ul class="nav-links">
                 <li><a href="#work">Work</a></li>
                 <li><a href="#about">About</a></li>
@@ -24,32 +24,29 @@
     <section class="hero">
         <div class="hero-grid">
             <div class="hero-content">
-                <h1 class="hero-title">Build<br>what<br>matters</h1>
-                <p class="hero-tagline">Software engineer & maker</p>
+                <h1 class="hero-title">Design.<br>Build.<br>Ship.</h1>
+                <p class="hero-tagline">Engineering that moves mountains.</p>
             </div>
             <div class="hero-visual">
-                <svg viewBox="0 0 600 500" class="mountain-landscape" aria-hidden="true">
-                    <!-- Background peak - furthest -->
+                <svg viewBox="0 0 480 400" class="mountain-landscape" aria-hidden="true">
+                    <!-- Construction grid - engineering reference -->
+                    <line class="grid-line" x1="240" y1="0" x2="240" y2="400" />
+                    <line class="grid-line grid-line-h" x1="0" y1="240" x2="480" y2="240" />
+
+                    <!-- Primary peak - bold geometric form -->
                     <polygon
-                        class="peak peak-back"
-                        points="50,500 250,180 450,500"
+                        class="peak peak-primary"
+                        points="40,400 240,60 440,400"
                     />
-                    <!-- Middle peak - accent color -->
+
+                    <!-- Secondary peak - overlapping depth -->
                     <polygon
-                        class="peak peak-accent"
-                        points="200,500 380,100 560,500"
+                        class="peak peak-secondary"
+                        points="120,400 280,140 440,400"
                     />
-                    <!-- Foreground peak - darkest -->
-                    <polygon
-                        class="peak peak-front"
-                        points="0,500 180,220 360,500"
-                    />
-                    <!-- Geometric accent line -->
-                    <line
-                        class="accent-line"
-                        x1="380" y1="100"
-                        x2="600" y2="100"
-                    />
+
+                    <!-- Accent marker - summit point -->
+                    <circle class="summit-marker" cx="240" cy="60" r="6" />
                 </svg>
             </div>
         </div>
