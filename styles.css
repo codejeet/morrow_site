@@ -1,0 +1,347 @@
+/* ==========================================================================
+   Morrow Site - Bauhaus/Rams Design System
+
+   Principles:
+   - Form follows function
+   - Maximized negative space
+   - Grid-based asymmetrical balance
+   - Monochromatic + single accent
+   - Geometric sans-serif typography
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Design Tokens
+   -------------------------------------------------------------------------- */
+:root {
+    /* Monochromatic palette */
+    --color-black: #0a0a0a;
+    --color-dark: #1a1a1a;
+    --color-gray-dark: #3a3a3a;
+    --color-gray: #6a6a6a;
+    --color-gray-light: #9a9a9a;
+    --color-off-white: #f5f5f3;
+    --color-white: #fafafa;
+
+    /* Single accent - terracotta/burnt orange */
+    --color-accent: #c45a3b;
+
+    /* Typography */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Spacing scale (8px base) */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+    --space-2xl: 12rem;
+
+    /* Grid */
+    --grid-gap: 2rem;
+    --container-max: 1400px;
+    --container-padding: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Base
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+h1, h2, h3 {
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 7rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+p {
+    max-width: 60ch;
+}
+
+/* --------------------------------------------------------------------------
+   Header & Navigation
+   -------------------------------------------------------------------------- */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: var(--space-md) var(--container-padding);
+    background-color: transparent;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.nav-links a {
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section - Mountain Landscape
+   -------------------------------------------------------------------------- */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-off-white);
+    overflow: hidden;
+}
+
+.hero-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--grid-gap);
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--container-padding) var(--space-lg);
+    width: 100%;
+    align-items: end;
+}
+
+.hero-content {
+    padding-bottom: var(--space-xl);
+}
+
+.hero-title {
+    color: var(--color-black);
+    margin-bottom: var(--space-md);
+}
+
+.hero-tagline {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--color-gray);
+    letter-spacing: 0.02em;
+}
+
+.hero-visual {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.mountain-landscape {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Mountain peaks - layered depth */
+.peak {
+    transition: transform 0.3s ease;
+}
+
+.peak-back {
+    fill: var(--color-gray-light);
+}
+
+.peak-accent {
+    fill: var(--color-accent);
+}
+
+.peak-front {
+    fill: var(--color-dark);
+}
+
+.accent-line {
+    stroke: var(--color-accent);
+    stroke-width: 2;
+}
+
+/* Scroll indicator */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: var(--space-lg);
+    left: var(--container-padding);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.scroll-text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-gray);
+}
+
+.scroll-line {
+    width: 48px;
+    height: 1px;
+    background-color: var(--color-gray);
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+.section {
+    padding: var(--space-xl) var(--container-padding);
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-gray-light);
+}
+
+.section-number {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 0.1em;
+}
+
+.content-placeholder {
+    color: var(--color-gray);
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.site-footer {
+    padding: var(--space-lg) var(--container-padding);
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-gray);
+    border-top: 1px solid var(--color-gray-light);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive - Mobile First Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 1.5rem;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        padding-top: var(--space-xl);
+    }
+
+    .hero-content {
+        padding-bottom: var(--space-md);
+        order: 1;
+    }
+
+    .hero-visual {
+        order: 2;
+        min-height: 300px;
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: var(--space-md);
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Print Styles
+   -------------------------------------------------------------------------- */
+@media print {
+    .site-header,
+    .hero-scroll-indicator {
+        display: none;
+    }
+
+    .hero {
+        min-height: auto;
+        page-break-after: always;
+    }
+}
