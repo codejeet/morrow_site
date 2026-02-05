@@ -124,9 +124,9 @@ p {
 }
 
 .logo {
-    font-size: 1.25rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
 }
 
 .nav-links {
@@ -167,11 +167,11 @@ p {
     margin: 0 auto;
     padding: var(--space-2xl) var(--container-padding) var(--space-lg);
     width: 100%;
-    align-items: end;
+    align-items: center;
 }
 
 .hero-content {
-    padding-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
 }
 
 .hero-title {
@@ -188,39 +188,44 @@ p {
 
 .hero-visual {
     position: relative;
-    height: 100%;
-    min-height: 400px;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
 }
 
 .mountain-landscape {
     width: 100%;
-    max-width: 600px;
+    max-width: 480px;
     height: auto;
 }
 
-/* Mountain peaks - layered depth */
+/* Construction grid - Bauhaus engineering reference */
+.grid-line {
+    stroke: var(--color-gray-light);
+    stroke-width: 1;
+    stroke-dasharray: 4 4;
+}
+
+.grid-line-h {
+    stroke-dasharray: 8 4;
+}
+
+/* Mountain peaks - pure geometric forms */
 .peak {
-    transition: transform 0.3s ease;
+    /* No transitions - Rams: "Good design is as little design as possible" */
 }
 
-.peak-back {
-    fill: var(--color-gray-light);
+.peak-primary {
+    fill: var(--color-black);
 }
 
-.peak-accent {
-    fill: var(--color-accent);
-}
-
-.peak-front {
+.peak-secondary {
     fill: var(--color-dark);
 }
 
-.accent-line {
-    stroke: var(--color-accent);
-    stroke-width: 2;
+/* Summit marker - accent with purpose (marks the peak) */
+.summit-marker {
+    fill: var(--color-accent);
 }
 
 /* Scroll indicator */
@@ -299,17 +304,19 @@ p {
     .hero-grid {
         grid-template-columns: 1fr;
         padding-top: var(--space-xl);
+        text-align: center;
     }
 
     .hero-content {
         padding-bottom: var(--space-md);
-        order: 1;
     }
 
     .hero-visual {
-        order: 2;
-        min-height: 300px;
-        justify-content: center;
+        margin-top: var(--space-md);
+    }
+
+    .mountain-landscape {
+        max-width: 320px;
     }
 
     .nav-links {
