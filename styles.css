@@ -127,6 +127,7 @@ p {
     font-size: 0.875rem;
     font-weight: 700;
     letter-spacing: 0.2em;
+    margin-bottom: var(--space-md);
 }
 
 .nav-links {
